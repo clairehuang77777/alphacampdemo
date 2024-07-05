@@ -1,0 +1,113 @@
+
+
+/*卡片在桌上的排列方式是 13 * 4 排*/
+/*定義卡片在牌桌上的排列*/
+#cardTable{
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
+  margin: 0 auto;
+  position: absolute;
+}
+
+
+/*定義卡片花色&文字在卡片上的陳設*/
+.card{
+  display: flex;
+  flex: 7% 0 1;
+  height: 8vw;
+  border: 2px solid #a9a8a8;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 2px;
+  box-sizing: border-box;
+
+}
+
+.card img{
+  max-width: 30%;
+  align-self: center;
+}
+
+.card p {
+  font-size: 10px;
+  margin: 3px
+  ;
+}
+
+.card p:last-child{
+  transform:rotate(180deg);
+}
+/*flex: flex-grow flex-shrink flex-basis */
+
+.back {
+  background: url('https://assets-lighthouse.alphacamp.co/uploads/image/file/9222/ExportedContentImage_00.png');
+  background-size: cover;
+}
+
+.paired{
+  background-color: #dae0e3;
+}
+
+#header{
+  display: flex;
+  margin: 0 0;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 85%;
+}
+
+#header .title {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#header .title img{
+  max-width: 3em;
+}
+
+#header .title h2 {
+  padding-left: 0.5em;
+}
+
+#header .score {
+  margin: 0;
+  color: #6c90ac;
+}
+
+#header .tried {
+  margin-top: 0;
+}
+
+
+.wrong {
+  animation-name: wrongAnimation;
+  animation-duration: 0.2s;
+  animation-iteration-count: 5;
+}
+
+@keyframes wrongAnimation {
+  to {
+    border: 2px solid #ffd54f;
+  }
+}
+
+.popupeffect {
+  background-color: tomato;
+  width: 200px;
+  height: 150px;
+  position: relative;
+  top: 20px;
+  left: 130px;
+  opacity: 0.6;
+
+}
+
+#celebration p {
+  text-align: center;
+  vertical-align: center ;
+  display: none;
+  position:relative;
+  top:50px;
+}
